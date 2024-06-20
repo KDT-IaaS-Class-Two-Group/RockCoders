@@ -8,7 +8,7 @@ const CommentForm: React.FC = () => {
       <form action="/comment">
         <input type="text" />
         <input type="text" />
-        <input type="submit" name="" id="" />
+        <button type="submit">제출</button>
       </form>
     </div>
   );
