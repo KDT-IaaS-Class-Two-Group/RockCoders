@@ -2,7 +2,7 @@
  * @eonduck2 24.06.20
  * * 방명록 틀이 될 폼 컴포넌트
  */
-const commentForm: React.FC = () => {
+const CommentForm: React.FC = () => {
   return (
     <div>
       <form action="/comment">
@@ -14,4 +14,4 @@ const commentForm: React.FC = () => {
   );
 };
 
-export default commentForm;
+export default CommentForm;
