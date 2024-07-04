@@ -30,7 +30,7 @@
   "version": "1.0.0",
   "main": "src/init.ts",
   "scripts": {
-    "dev:server": "nodemon --exec ts-node ./src/server/init.ts",
+    "dev:server": "nodemon",
     "dev:build": "webpack"
   },
   "author": "",
