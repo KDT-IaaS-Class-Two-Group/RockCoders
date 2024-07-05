@@ -3,7 +3,8 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import tailwindcss from "tailwindcss";
 
-export default {
+/** @type {import('webpack').Configuration} */
+const config = {
   watch: true,
   entry: "./src/index.tsx",
   output: {
@@ -57,5 +58,16 @@ export default {
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+
+  devtool: "source-map",
+  devServer: {
+    static: {
+      directory: path.join(___dirname, "public")
+    },
+    compress: true,
+    port: 3000
+  }
 };
+
+export default config;

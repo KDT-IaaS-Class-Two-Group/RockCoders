@@ -5,6 +5,8 @@ import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 import config from "../../webpack.config";
 
+console.log(config);
+
 const ___dirname = path.resolve();
 const app = express();
 const compiler = webpack(config);
@@ -12,7 +14,7 @@ const compiler = webpack(config);
 // 웹팩 미들웨어 설정
 app.use(
   webpackDevMiddleware(compiler, {
-    publicPath: config.output!.publicPath!,
+    publicPath: config.output!.publicPath!
   })
 );
 
