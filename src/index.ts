@@ -5,3 +5,5 @@ function add(a: any, b: any) {
 }
 
 add(3, 4);
+
+console.log(1);
