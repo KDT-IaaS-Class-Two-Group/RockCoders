@@ -39,7 +39,9 @@
   "main": "src/init.ts",
   "scripts": {
     "dev:server": "nodemon",
-    "dev:build": "webpack"
+    "dev:build": "webpack",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "author": "",
   "license": "MIT",
