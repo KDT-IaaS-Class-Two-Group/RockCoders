@@ -1,12 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-// !---------------------
-// import ReactDOM from "react-dom";
-// !---------------------
-
-import App from "./App";
-
 // * 리액트 18 버전 이상 렌더링 방식
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
