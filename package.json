@@ -43,6 +43,7 @@
     "tailwindcss": "^3.4.4",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^7.15.0",
     "webpack": "^5.92.1",
@@ -51,7 +52,7 @@
   },
   "name": "rockcoders",
   "version": "1.0.0",
-  "main": "src/init.ts",
+  "main": "src/server/server.ts",
   "type": "module",
   "scripts": {
     "dev:server": "nodemon",

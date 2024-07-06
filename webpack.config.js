@@ -2,12 +2,11 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import tailwindcss from "tailwindcss";
-import { Configuration } from "webpack";
-import 'webpack-dev-server';
 
-const config: Configuration = {
+const config = {
+  mode: 'development',
   watch: true,
-  entry: "./src/index.tsx",
+  entry: "./src/client/index.tsx",
   output: {
     path: path.resolve(process.cwd(), "dist"),
     filename: "bundle.js",
