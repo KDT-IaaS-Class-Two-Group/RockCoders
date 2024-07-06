@@ -3,12 +3,13 @@ import React from 'react';
 //textComponent 함수의 interface 정의
 interface TextComponentProps {
     text: string;
-    className?: string;}
+    className?: string;
+}
 
 /**
  * @moonhr 24.07.05
  * * 카드 제작에 사용될 기본 textComponent
- * @param text="" className="" 으로 작성하면 됨.
+ * @param classname
  * @returns p태그
  */
 const TextComponent: React.FC<TextComponentProps> = ({ text, className = '' }) => {
