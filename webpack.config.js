@@ -3,13 +3,14 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import tailwindcss from "tailwindcss";
 
-/** @type {import('webpack').Configuration} */
 const config = {
+  mode: 'development',
   watch: true,
-  entry: "./src/index.tsx",
+  entry: "./src/client/index.tsx",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    path: path.resolve(process.cwd(), "dist"),
+    filename: "bundle.js",
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -48,22 +49,21 @@ const config = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", "jsx"]
+    extensions: [".tsx", ".ts", ".js", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "public", "index.html")
+      template: path.resolve(process.cwd(), "public", "index.html")
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
   ],
-
   devtool: "source-map",
   devServer: {
     static: {
-      directory: path.join(___dirname, "public")
+      directory: path.join(process.cwd(), "public")
     },
     compress: true,
     port: 3000

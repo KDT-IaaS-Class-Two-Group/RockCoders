@@ -1,4 +1,5 @@
 {
-  "ignore": ["webpack.config.js", "src/client/*", "dist/*"],
-  "exec": "ts-node ./src/server/init.ts"
+  "watch": ["./src/server"],
+  "ext": "ts",
+  "exec": "node --loader ts-node/esm ./src/server/server.ts"
 }
