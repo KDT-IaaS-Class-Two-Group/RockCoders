@@ -5,3 +5,8 @@
   align-items: center;
   height: 100vh;
 }
+
+.keyword-row {
+  justify-content: center;
+  margin: 10px 0;
+}
