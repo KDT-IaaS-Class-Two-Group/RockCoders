@@ -5,6 +5,7 @@ import React from "react";
  * 팀원들의 키워드들을 나타내는 컴포넌트
  */
 
+// * keyword 정적 할당
 const keywordData = [
   "고기",
   "엉뚱한생각",
@@ -43,8 +44,10 @@ const keywordData = [
   "물리면담"
 ];
 
+// * 각 줄의 키워드 개수 지정
 const rowLength = [4, 5, 6, 5, 6, 5, 4];
 
+// * 각 줄의 키워드를 개수별로 배열에 담아내기
 const getRows = (keywordData: string[], rowLength: number[]): string[][] => {
   const rows: string[][] = [];
   let i = 0;
@@ -58,6 +61,7 @@ const getRows = (keywordData: string[], rowLength: number[]): string[][] => {
 
 const rows = getRows(keywordData, rowLength);
 
+// * Keyword 컴포넌트
 const Keyword: React.FC = () => {
   return (
     <div>
