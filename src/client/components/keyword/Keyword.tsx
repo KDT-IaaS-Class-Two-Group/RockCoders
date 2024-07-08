@@ -69,7 +69,9 @@ const Keyword: React.FC = () => {
       {rows.map((row, rowIdx) => (
         <div key={rowIdx} className="keyword-row">
           {row.map((keyword, idx) => (
-            <span key={idx}>{keyword}</span>
+            <span key={idx} className="keyword">
+              {keyword}
+            </span>
           ))}
         </div>
       ))}

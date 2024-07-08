@@ -10,3 +10,10 @@
   justify-content: center;
   margin: 10px 0;
 }
+
+.keyword {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 10px 20px;
+  animation: float 2.5s ease-in-out infinite;
+}
