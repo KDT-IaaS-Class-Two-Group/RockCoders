@@ -43,11 +43,30 @@ const keywordData = [
   "물리면담"
 ];
 
+const rowLength = [4, 5, 6, 5, 6, 5, 4];
+
+const getRows = (keywordData: string[], rowLength: number[]): string[][] => {
+  const rows: string[][] = [];
+  let i = 0;
+
+  rowLength.forEach((length) => {
+    rows.push(keywordData.slice(i, i + length));
+    i += length;
+  });
+  return rows;
+};
+
+const rows = getRows(keywordData, rowLength);
+
 const Keyword: React.FC = () => {
   return (
     <div>
-      {keywordData.map((keyword, idx) => (
-        <span key={idx}>{keyword}</span>
+      {rows.map((row, rowIdx) => (
+        <div key={rowIdx}>
+          {row.map((keyword, idx) => (
+            <span key={idx}>{keyword}</span>
+          ))}
+        </div>
       ))}
     </div>
   );
