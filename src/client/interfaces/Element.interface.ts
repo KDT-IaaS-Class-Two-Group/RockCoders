@@ -1,3 +1,3 @@
 import React from "react";
 
-export default interface IElement extends HTMLElement {}
+export default interface IElement extends React.HTMLAttributes<HTMLElement> {}
