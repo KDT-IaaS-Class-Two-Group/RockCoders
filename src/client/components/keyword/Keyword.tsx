@@ -1,4 +1,5 @@
 import React from "react";
+import "./keyword.css";
 
 /**
  * @yuxincxoi 24.07.08
@@ -64,7 +65,7 @@ const rows = getRows(keywordData, rowLength);
 // * Keyword 컴포넌트
 const Keyword: React.FC = () => {
   return (
-    <div>
+    <div className="keyword-container">
       {rows.map((row, rowIdx) => (
         <div key={rowIdx}>
           {row.map((keyword, idx) => (
