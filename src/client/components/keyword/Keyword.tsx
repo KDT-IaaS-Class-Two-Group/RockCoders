@@ -69,7 +69,11 @@ const Keyword: React.FC = () => {
       {rows.map((row, rowIdx) => (
         <div key={rowIdx} className="keyword-row">
           {row.map((keyword, idx) => (
-            <span key={idx} className="keyword">
+            <span
+              key={idx}
+              className="keyword"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
               {keyword}
             </span>
           ))}
