@@ -42,3 +42,15 @@ const keywordData = [
   "저작운동",
   "물리면담"
 ];
+
+const Keyword: React.FC = () => {
+  return (
+    <div>
+      {keywordData.map((keyword, idx) => (
+        <span key={idx}>{keyword}</span>
+      ))}
+    </div>
+  );
+};
+
+export default Keyword;
