@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import tailwindcss from "tailwindcss";
 
 const config = {
-  mode: 'development',
+  mode: "development",
   watch: true,
   entry: "./src/client/index.tsx",
   output: {
@@ -43,6 +43,14 @@ const config = {
                 plugins: [tailwindcss, "autoprefixer"]
               }
             }
+          }
+        ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: "file-loader"
           }
         ]
       }
