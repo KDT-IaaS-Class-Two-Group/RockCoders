@@ -3,7 +3,7 @@ import IFrameBreaker from "./FrameBreaker.interface";
 import StyledFrameBreaker from "./FrameBreaker.style";
 
 const FrameBreaker: React.FC<IFrameBreaker> = () => {
-  return <StyledFrameBreaker src=""></StyledFrameBreaker>;
+  return <StyledFrameBreaker src="" />;
 };
 
 export default FrameBreaker;
