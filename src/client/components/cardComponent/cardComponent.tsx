@@ -13,7 +13,7 @@ interface CardComponentProps {
  */
 const CardComponent:React.FC<CardComponentProps> = ({className = '', children}) => {
   return (
-    <div className={`bg-white w-443 h-600 rounded-lg shadow-lg overflow-hidden ${className}`}>
+    <div className={`bg-gray-300 w-443 h-600 rounded-lg shadow-lg overflow-hidden ${className}`}>
       {children}
     </div>
   )
