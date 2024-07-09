@@ -1,21 +1,20 @@
 import React from 'react';
 import TextComponent from '../textComponent';
 import ProgressBar from './progressBar';
+import CardBackBodyProps from './interface/CardBackBodyProps';
 
-interface CardBackBodyProps {
-  mainText : string
-  bodyText : string
-  githubLink : string
-  progressPercentage : number
-}
-
-const CardBackBody:React.FC<CardBackBodyProps> = ({mainText, bodyText, githubLink, progressPercentage}) => {
+/**
+ * @moonhr 24.07.09
+ * @param CardBackBodyProps
+ * @returns 개인프로젝트 부분
+ */
+const CardBackBody:React.FC<CardBackBodyProps> = (props) => {
   return (
-    <div className=''>
-      <TextComponent text={mainText} className='' />
-      <TextComponent text={bodyText} className='' />
-      <a className=''>{githubLink}</a>
-      <ProgressBar progress={progressPercentage} />
+    <div className='flex flex-col'>
+      <TextComponent text={props.mainText} className='text-3xl' />
+      <TextComponent text={props.bodyText} className='text-xs	' />
+      <a href={props.githubLink} className='text-sm	font-semibold'>GitHub Link</a>
+      <ProgressBar progress={props.progressPercentage} />
     </div>
   );
 };
