@@ -13,7 +13,7 @@ const HeaderComponent:React.FC<HeaderComponentProps> = ({name, size, hp, typeIco
   return (
     <div className="relative">
       {/* 크기 타입 텍스트 - 왼쪽 상단 */}
-      <TextComponent text={size} className="absolute top-2 left-2 text-xs text-gray-500" />
+      <TextComponent text={size} className="rounded-md absolute top-2 left-2 text-base text-gray-500" />
       
       {/* 포켓몬 이름 - 중앙 상단 */}
       <TextComponent text={name} className="absolute top-2 left-1/2 transform -translate-x-1/2 text-lg font-bold" />
