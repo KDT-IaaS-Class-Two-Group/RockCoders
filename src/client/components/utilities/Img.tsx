@@ -14,7 +14,12 @@ const ImageComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
 
   const fullSrc = isFullSrc ? src : src! + extension;
 
-  return <img src={fullSrc} {...rest} />;
+  return (
+    <picture>
+      <source srcSet={fullSrc} />
+      <img src={fullSrc} {...rest} />
+    </picture>
+  );
 };
 
 export default ImageComponent;
