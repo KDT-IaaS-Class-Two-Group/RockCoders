@@ -13,7 +13,9 @@ const FrontCardComponent:React.FC<FrontCardComponentProps> = ({className}) => {
     <CardComponent className={`relative ${className}`}>
       <CardContentComponent className="bg-blue-200 rounded-lg relative">
         <HeaderComponent size="대형" name="유호영" hp={10000} typeIcon='/static/img/개인아이콘_대지 1.png' />
-        <ImgBoxComponent imgUrl='' />
+        <div className="flex justify-center items-center">
+          <ImgBoxComponent imgUrl='/static/img/profileImg/롱스톤.webp' />
+        </div>
       </CardContentComponent>
     </CardComponent>
   );
