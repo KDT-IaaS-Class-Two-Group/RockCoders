@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import ImageComponent from "../utilities/Img";
+import PictureComponent from "../utilities/Picture";
 
-const StyledFrameBreaker = styled(ImageComponent)`
-  width: 25rem;
-  height: 200px;
+const StyledFrameBreaker = styled(PictureComponent)`
+  width: ${(props) => props.width ?? "25rem"};
+  height: ${(props) => props.height ?? "12.5rem"};
 `;
 
 export default StyledFrameBreaker;

@@ -49,7 +49,10 @@ const config = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx"]
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
+    fallback: {
+      path: require.resolve("path-browserify")
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -58,9 +61,6 @@ const config = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
-    }),
-    new webpack.ProvidePlugin({
-      path: ["path-browserify"]
     })
   ],
   devtool: "source-map",

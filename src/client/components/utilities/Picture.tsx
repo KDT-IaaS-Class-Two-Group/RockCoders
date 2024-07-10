@@ -9,7 +9,7 @@ import TImg from "./Picture.type";
  * @param { string } rest Image 태그가 가질 수 있는 지정된 속성들 ex) className = "some-class"
  * @returns { JSX.Element } 이미지를 표시하는 img 엘리먼트
  */
-const ImageComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
+const PictureComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
   const isFullSrc = src !== undefined && extension === undefined;
 
   const fullSrc = isFullSrc ? src : src! + extension;
@@ -22,4 +22,4 @@ const ImageComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
   );
 };
 
-export default ImageComponent;
+export default PictureComponent;

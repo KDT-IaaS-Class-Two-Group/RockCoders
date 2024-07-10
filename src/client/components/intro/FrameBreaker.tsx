@@ -5,10 +5,7 @@ import FrameBreakerObj from "../../../../static/frameBreaker/FrameBreakerObj";
 
 const FrameBreaker: React.FC<TFrameBreaker> = () => {
   return (
-    <StyledFrameBreaker
-      src={FrameBreakerObj.fullSrc}
-      className="rounded-full"
-    />
+    <StyledFrameBreaker src={FrameBreakerObj.fullSrc} className="rounded-3xl" />
   );
 };
 
