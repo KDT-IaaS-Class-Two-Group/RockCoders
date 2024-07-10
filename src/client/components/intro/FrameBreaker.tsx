@@ -1,14 +1,10 @@
 import React from "react";
-import IFrameBreaker from "./FrameBreaker.interface";
+import TFrameBreaker from "./FrameBreaker.type";
 import StyledFrameBreaker from "./FrameBreaker.style";
 import FBPath from "../../../../static/FrameBreakerPath";
 
-const FrameBreaker: React.FC<IFrameBreaker> = () => {
-  return (
-    <video width="600" controls>
-      <source src={FBPath} type="video/mov" />
-    </video>
-  );
+const FrameBreaker: React.FC<TFrameBreaker> = () => {
+  return <StyledFrameBreaker src={FBPath} />;
 };
 
 export default FrameBreaker;
