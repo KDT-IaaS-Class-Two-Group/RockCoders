@@ -58,6 +58,9 @@ const config = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new webpack.ProvidePlugin({
+      path: ["path-browserify"]
     })
   ],
   devtool: "source-map",

@@ -12,7 +12,7 @@ import TImg from "./Img.type";
 const ImageComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
   const isFullSrc = src !== undefined && extension === undefined;
 
-  const fullSrc = isFullSrc ? src : src + extension;
+  const fullSrc = isFullSrc ? src : src! + extension;
 
   return <img src={fullSrc} {...rest} />;
 };

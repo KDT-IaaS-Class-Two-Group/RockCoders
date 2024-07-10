@@ -1,4 +1,5 @@
-import path from "node:path";
+//@ts-ignore
+import path from "path-browserify";
 
 /**
  * @eonduck2 24.07.10
