@@ -14,8 +14,8 @@ interface ImgComponentProps {
  * @param className 클래스 명
  * @returns img태그
  */
-const ImgComponent: React.FC<ImgComponentProps> = ({imgUrl,alt = '',className = ''}) => {
+const ImgComponent: React.FC<ImgComponentProps> = ({imgUrl, alt = '', className = ''}) => {
   return <img src={imgUrl} alt={alt} className={className} />;
-}
+};
 
 export default ImgComponent;

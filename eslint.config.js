@@ -29,7 +29,8 @@ export default [
       "no-extra-semi": "error", // 추가적인 세미콜론 사용을 방지
       "no-mixed-spaces-and-tabs": "error", // 공백과 탭을 혼용하는 것을 방지
       "no-multiple-empty-lines": ["error", { max: 1 }], // 연속적인 빈 줄을 방지
-      "prefer-const": ["warn"] // 변수 재할당이 없는 경우 경고
+      "prefer-const": ["warn"], // 변수 재할당이 없는 경우 경고
+      "react/prop-types": "off" // react/prop-types 규칙 비활성화
     },
     settings: {
       react: {
