@@ -4,7 +4,12 @@ import StyledFrameBreaker from "./FrameBreaker.style";
 import FrameBreakerObj from "../../../../static/frameBreaker/FrameBreakerObj";
 
 const FrameBreaker: React.FC<TFrameBreaker> = () => {
-  return <StyledFrameBreaker src={FrameBreakerObj.fullSrc} />;
+  return (
+    <StyledFrameBreaker
+      src={FrameBreakerObj.fullSrc}
+      className="rounded-full"
+    />
+  );
 };
 
 export default FrameBreaker;
