@@ -1,7 +1,5 @@
 import TImg from "../utilities/Img.type";
 
-type TFrameBreaker = TImg & {
-  extension: string;
-};
+type TFrameBreaker = TImg;
 
 export default TFrameBreaker;
