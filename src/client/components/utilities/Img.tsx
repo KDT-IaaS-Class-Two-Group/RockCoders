@@ -10,7 +10,9 @@ import TImg from "./Img.type";
  * @returns { JSX.Element } 이미지를 표시하는 img 엘리먼트
  */
 const ImageComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
-  const fullSrc = src + "." + extension;
+  const isFullSrc = src !== undefined && extension === undefined;
+
+  const fullSrc = isFullSrc ? src : src + extension;
 
   return <img src={fullSrc} {...rest} />;
 };
