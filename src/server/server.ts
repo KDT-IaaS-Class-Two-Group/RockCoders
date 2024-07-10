@@ -25,6 +25,7 @@ app.use(webpackHotMiddleware(compiler));
 app.use(express.static(path.resolve("public")));
 app.use(express.static(path.resolve("src")));
 app.use(express.static(path.resolve("static")));
+app.use('/static', express.static(path.resolve("static")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve("public", "index.html"));
