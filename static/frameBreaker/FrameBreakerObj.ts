@@ -1,10 +1,10 @@
 import TFrameBreakerObj from "./FrameBreakerObj.type";
-import pathGetter from "../../src/utilities/pathGetter";
+// import pathGetter from "../../src/utilities/pathGetter";
 
-const path = pathGetter("assets", "gifs");
+const path = "./assets/gifs/";
 const fileName = "frame_breaker";
 const extension = ".gif";
-const fullSrc = pathGetter(path, fileName + extension);
+const fullSrc = path + fileName + extension;
 
 const FrameBreakerObj: TFrameBreakerObj = {
   path: path,
