@@ -1,5 +1,5 @@
 import React from "react";
-import TImg from "./Img.type";
+import TImg from "./Picture.type";
 
 /**
  * @eonduck2 24.07.10

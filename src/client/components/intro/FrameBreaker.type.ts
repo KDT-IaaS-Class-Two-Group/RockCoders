@@ -1,4 +1,4 @@
-import TImg from "../utilities/Img.type";
+import TImg from "../utilities/Picture.type";
 
 type TFrameBreaker = TImg;
 
