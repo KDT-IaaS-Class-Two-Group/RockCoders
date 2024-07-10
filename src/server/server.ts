@@ -1,5 +1,4 @@
 import path from "path";
-import { fileURLToPath } from 'url';
 import express from "express";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
@@ -25,6 +24,7 @@ app.use(webpackHotMiddleware(compiler));
 // 정적 파일 제공
 app.use(express.static(path.resolve("public")));
 app.use(express.static(path.resolve("src")));
+app.use(express.static(path.resolve("static")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve("public", "index.html"));
