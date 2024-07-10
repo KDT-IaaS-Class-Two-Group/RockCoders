@@ -20,7 +20,7 @@ interface HeaderComponentProps {
  */
 const HeaderComponent:React.FC<HeaderComponentProps> = ({name, size, hp, typeIcon}) => {
   return (
-    <div className='relative'>
+    <div className='relative h-8'>
       {/* 크기 타입 텍스트 - 왼쪽 상단 */}
       <TextComponent text={size} className="flex justify-center items-center w-20 h-7 rounded-xl absolute top-0 left-0 text-base text-gray-500 bg-gray-300 shadow-custom" />
       
