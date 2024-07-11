@@ -49,10 +49,7 @@ const config = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx"],
-    fallback: {
-      path: require.resolve("path-browserify")
-    }
+    extensions: [".tsx", ".ts", ".js", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({

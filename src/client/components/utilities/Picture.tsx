@@ -1,5 +1,6 @@
 import React from "react";
 import TImg from "./Picture.type";
+import Element from "./Element";
 
 /**
  * @eonduck2 24.07.10
@@ -9,17 +10,17 @@ import TImg from "./Picture.type";
  * @param { string } rest Image 태그가 가질 수 있는 지정된 속성들 ex) className = "some-class"
  * @returns { JSX.Element } 이미지를 표시하는 img 엘리먼트
  */
-const PictureComponent: React.FC<TImg> = ({ src, extension, ...rest }) => {
+const Picture: React.FC<TImg> = ({ src, extension, ...rest }) => {
   const isFullSrc = src !== undefined && extension === undefined;
 
   const fullSrc = isFullSrc ? src : src! + extension;
 
   return (
-    <picture>
-      <source srcSet={fullSrc} />
-      <img src={fullSrc} {...rest} />
-    </picture>
+    <Element tagName="picture">
+      <Element tagName="source" srcSet={fullSrc} />
+      <Element tagName="img" src={fullSrc} {...rest} />
+    </Element>
   );
 };
 
-export default PictureComponent;
+export default Picture;
